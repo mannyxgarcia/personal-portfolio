@@ -6,7 +6,7 @@ const About = () => {
   const background = document.querySelector('body')
   return (
     <React.Fragment>
-      {background.setAttribute('style', 'background: #e775fc')}
+      {background.setAttribute('style', 'background: #ea88fc')}
       <Navbar></Navbar>
       <div className="main-container">
         <div className="header">

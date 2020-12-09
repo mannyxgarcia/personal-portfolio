@@ -6,7 +6,7 @@ const Contact = () => {
   const background = document.querySelector('body')
   return (
     <React.Fragment>
-      {background.setAttribute('style', 'background: #fcdd75')}
+      {background.setAttribute('style', 'background: #ffc77d')}
       <Navbar />
       <div className="main-container">
         <h1>I'd love to get in touch.</h1>
