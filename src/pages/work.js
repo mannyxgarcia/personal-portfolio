@@ -14,7 +14,7 @@ const Work = ({data}) => {
       <div className="work-container">
         {work.map(singleWork => {
           return (
-            <Link key={singleWork.id} to ={`/${singleWork.frontmatter.slug}`}>
+            <Link key={singleWork.id} to ={`/work/${singleWork.frontmatter.slug}`}>
             <div className='work-title'>{singleWork.frontmatter.title}</div>
             {singleWork.frontmatter.subTitle}
             </Link>
