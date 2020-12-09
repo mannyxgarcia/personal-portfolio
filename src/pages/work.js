@@ -11,7 +11,7 @@ const Work = ({data}) => {
     <React.Fragment>
       {background.setAttribute('style', 'background: #01cab9')}
       <Navbar></Navbar>
-      <div className="work-container">
+      <div className="main-container">
         {work.map(singleWork => {
           return (
             <Link key={singleWork.id} to ={`/work/${singleWork.frontmatter.slug}`}>

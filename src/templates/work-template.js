@@ -13,9 +13,13 @@ const WorkTemplate = ({data}) => {
       <Navbar></Navbar>
       <Wrapper>
         <div className='container'>
+          <div className="title">
             <h1>{title}</h1>
-            <h2>{subTitle}</h2>
+            {subTitle}
+          </div>
+          <div className="content">
             <MDXRenderer>{body}</MDXRenderer>
+          </div>
         </div>
       </Wrapper>
     </React.Fragment>
@@ -42,15 +46,28 @@ const Wrapper = styled.section`
     align-items: center;
     color: #000;
   }
+  
+  .title {
+    align-self: flex-start;
+  }
   @media only screen and (min-width: 700px) {
     .container {
-      margin: 4rem
+      margin: 1rem 4rem 1rem 10rem;
+    }
+    .title {
+      height: 70vh
+    }
+    .content {
+      padding: 0 8rem 0 4rem 
     }
   }
   
   @media only screen and (max-width: 700px) {
     .container {
-      margin: 1rem;
+      margin: 1.5rem;
+    }
+    .title {
+      height: 60vh
     }
   }
   
