@@ -1,0 +1,237 @@
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+body {
+  font-family: 'Roboto';
+  color: #fff;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+/*
+===============
+Links
+===============
+*/
+.page-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.link-about,
+.link-work,
+.link-contact {
+  font-weight: bold;
+}
+
+.link-about:hover {
+  color: #e775fc;
+}
+
+.link-work:hover {
+  color: #01cab9;
+}
+
+.link-contact:hover {
+  color: #fce875;
+}
+
+.link-about,
+.link-work,
+.link-contact,
+a {
+  color: inherit;
+}
+/*
+===============
+Intro
+===============
+*/
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.intro-tap {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+  .intro-container {
+    margin-left: 4rem;
+  }
+  .intro-greeting-sm {
+    display: none;
+  }
+  .intro-greeting-lg {
+    font-size: 6rem;
+    font-weight: bold;
+  }
+  .intro-name {
+    /* color: #a4c42e; */
+    color: #e775fc;
+    font-size: 6rem;
+    font-weight: bold;
+  }
+  .page-links {
+    margin-right: 4rem;
+  }
+  .link-about,
+  .link-work,
+  .link-contact {
+    font-size: 6rem;
+  }
+  .main-container {
+    margin: 4rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .intro-container {
+    margin-left: 3rem;
+  }
+  .intro-greeting-lg {
+    display: none;
+  }
+  .intro-greeting-sm {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  .intro-name {
+    /* color: #a4c42e; */
+    color: #e775fc;
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  .page-links {
+    margin-right: 2rem;
+  }
+  .link-about,
+  .link-work,
+  .link-contact {
+    font-size: 4.9rem;
+  }
+  .main-container {
+    margin: 1rem;
+  }
+}
+
+/*
+===============
+Nav
+===============
+*/
+.navbar {
+  background: #3b3b3b;
+  padding: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link {
+  color: #d8d8d8;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+/*
+===============
+About
+===============
+*/
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 55vh;
+}
+
+.content-container {
+  background: #f5f5f5;
+  padding: 1rem;
+  color: #000;
+}
+
+.social-icon-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.resume-link {
+  margin-top: 0.5rem;
+}
+
+.social-icon {
+  font-size: 2rem;
+  transition: var(--transition);
+  margin-right: 0.5rem;
+}
+
+.social-icon:hover {
+  color: var(--clr-primary-5);
+  transform: translateY(-5px);
+}
+
+.linkedin-icon {
+  color: #3b5998;
+}
+.twitter-icon {
+  color: #00acee;
+}
+.github-icon {
+  color: #000;
+}
+
+/*
+===============
+Contact
+===============
+*/
+
+.contact-container {
+  align-self: center;
+}
