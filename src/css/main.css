@@ -131,6 +131,11 @@ Intro
   .about-container {
     padding: 0 8rem 0 4rem;
   }
+  .contact-email {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -166,6 +171,10 @@ Intro
     padding-top: 3rem;
     margin-bottom: 1rem;
     font-weight: bold;
+  }
+  .contact-email {
+    margin-top: 2rem;
+    font-size: 1.4rem;
   }
 }
 

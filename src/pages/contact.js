@@ -14,7 +14,7 @@ const Contact = () => {
           <SocialLinks />
         </div>
         <div className="contact-container">
-          <h2>mannyalgarcia@gmail.com</h2>
+          <div className="contact-email">mannyalgarcia@gmail.com</div>
         </div>
       </div>
     </React.Fragment>
