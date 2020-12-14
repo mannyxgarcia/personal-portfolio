@@ -22,7 +22,9 @@ const WorkTemplate = ({data}) => {
               <Image fluid={image.childImageSharp.fluid}/>
           </div>
           <div className="content">
-            <MDXRenderer>{body}</MDXRenderer>
+            <div className="body">
+              <MDXRenderer>{body}</MDXRenderer>
+            </div>
           </div>
         </div>
       </Wrapper>
@@ -70,6 +72,11 @@ const Wrapper = styled.section`
   .img {
     align-self: flex-start;
   }
+  .content {
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+    color: #494949
+  }
   @media only screen and (min-width: 700px) {
     .container {
       margin: 5rem 4rem 1rem 10rem;
@@ -79,10 +86,16 @@ const Wrapper = styled.section`
       margin-bottom: 30vh;
     }
     .content {
-      padding: 0 8rem 0 4rem 
+      padding: 4rem 8rem 0 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center
     }
     .img{
       width: 80vw;
+    }
+    .body{
+      width: 80%
     }
   }
   
@@ -95,11 +108,12 @@ const Wrapper = styled.section`
     }
     .img {
       width: 90vw;
+      margin-bottom: 3rem
     }
   }
   
   h2{
-    font-size: 1.5rem
+    font-size: 2rem
   }
 `
 
