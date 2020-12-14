@@ -3,9 +3,10 @@ import Navbar from '../components/Navbar'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Image from 'gatsby-image'
 
 const WorkTemplate = ({data}) => {
-  const {mdx:{frontmatter:{title, subTitle, date},body,}} = data
+  const {mdx:{frontmatter:{title, subTitle, date, image},body,}} = data
   const background = document.querySelector('body')
   return (
     <React.Fragment>
@@ -15,7 +16,10 @@ const WorkTemplate = ({data}) => {
         <div className='container'>
           <div className="title">
             <h1>{title}</h1>
-            {subTitle}
+            <div className="subTitle">{subTitle}</div>
+          </div>
+          <div className='img'>
+              <Image fluid={image.childImageSharp.fluid}/>
           </div>
           <div className="content">
             <MDXRenderer>{body}</MDXRenderer>
@@ -34,6 +38,13 @@ query GetSingleWork($slug: String) {
       subTitle
       date(formatString: "MMMM YYYY")
       slug
+      image {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
     body
   }
@@ -46,19 +57,32 @@ const Wrapper = styled.section`
     align-items: center;
     color: #000;
   }
-  
+  /* .img {
+    width: 100vw;
+    align-self: flex-start;
+  } */
   .title {
+    align-self: flex-start;
+  }
+  .subTitle {
+    padding-bottom: 1rem
+  }
+  .img {
     align-self: flex-start;
   }
   @media only screen and (min-width: 700px) {
     .container {
-      margin: 1rem 4rem 1rem 10rem;
+      margin: 5rem 4rem 1rem 10rem;
+      
     }
     .title {
-      height: 70vh
+      margin-bottom: 30vh;
     }
     .content {
       padding: 0 8rem 0 4rem 
+    }
+    .img{
+      width: 80vw;
     }
   }
   
@@ -67,7 +91,10 @@ const Wrapper = styled.section`
       margin: 1.5rem;
     }
     .title {
-      height: 60vh
+      padding-bottom: 1rem
+    }
+    .img {
+      width: 90vw;
     }
   }
   
