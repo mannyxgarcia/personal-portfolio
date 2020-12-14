@@ -77,6 +77,9 @@ const Wrapper = styled.section`
     line-height: 2.1rem;
     color: #494949
   }
+  a{
+    color: blue
+  }
   @media only screen and (min-width: 700px) {
     .container {
       margin: 5rem 4rem 1rem 10rem;
