@@ -81,21 +81,21 @@ a {
 Intro
 ===============
 */
-.intro-container {
+/* .intro-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
   cursor: pointer;
-}
+} */
 
-.intro-tap {
+/* .intro-tap {
   margin-top: 2rem;
   text-align: center;
-}
+} */
 
 @media only screen and (min-width: 700px) {
-  .intro-container {
+  /* .intro-container {
     margin-left: 4rem;
   }
   .intro-greeting-sm {
@@ -106,19 +106,19 @@ Intro
     font-weight: bold;
   }
   .intro-name {
-    /* color: #a4c42e; */
     color: #e775fc;
     font-size: 6rem;
     font-weight: bold;
-  }
-  .page-links {
+  } */
+
+  /* .page-links {
     margin-right: 4rem;
   }
   .link-about,
   .link-work,
   .link-contact {
     font-size: 6rem;
-  }
+  } */
   .main-container {
     margin: 1rem 4rem 1rem 10rem;
   }
@@ -148,7 +148,7 @@ Intro
 }
 
 @media only screen and (max-width: 700px) {
-  .intro-container {
+  /* .intro-container {
     margin-left: 3rem;
   }
   .intro-greeting-lg {
@@ -159,19 +159,18 @@ Intro
     font-weight: bold;
   }
   .intro-name {
-    /* color: #a4c42e; */
     color: #e775fc;
     font-size: 5rem;
     font-weight: bold;
-  }
-  .page-links {
+  } */
+  /* .page-links {
     margin-right: 2rem;
   }
   .link-about,
   .link-work,
   .link-contact {
     font-size: 4.9rem;
-  }
+  } */
   .main-container {
     margin: 3rem 1rem 1.5rem 1.5rem;
   }
