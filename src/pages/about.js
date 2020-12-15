@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import SocialLinks from '../constants/socialLinks'
+import {BsDownload} from 'react-icons/bs'
+import resume from '../constants/mgarcia-resume-12-20.pdf'
 
 const About = () => {
   const background = document.querySelector('body')
@@ -10,21 +12,25 @@ const About = () => {
       <Navbar></Navbar>
       <div className="main-container">
         <div className="header">
-          <h1>I am a fullstack developer.</h1>
+          <h1>I am a full stack developer.</h1>
         </div>
         <div className="about-container">
           <div className="social-links">
             <SocialLinks />
           </div>
           <div className="content-container">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia deleniti accusamus soluta facere dignissimos architecto beatae in sed, dicta veniam animi blanditiis sequi culpa delectus debitis nulla iusto eum! Corporis.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi obcaecati sit a, ipsam nesciunt ipsum aperiam, odit sequi consequatur inventore id cumque? Aliquid, beatae recusandae minus tempora illo a eligendi!
+            I am a full stack web developer with a passion for front-end web developement. I have 4 years of work experience in design for theatrical entertainment. I transitioned to software engineering to pursue a previous passion I had developed in my early high school years. I enjoy building out the visual components of a design and layout with careful consideration for the overall user experience. I blend my knowledge in design and technical skills to collaborate and create products with thoughtful and creative solutions. 
+            
           </div>
-          <div className="resume-link">resume link</div>
+          <div className="resume-link download-icon">
+          <a href={resume} download="mgarcia-resume.pdf"> <BsDownload/> download resume</a>
+          </div>
         </div>
       </div>
     </React.Fragment>
   )
 }
+
+
 
 export default About

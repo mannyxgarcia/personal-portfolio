@@ -16,7 +16,9 @@ const Work = ({data}) => {
           return (
             <Link key={singleWork.id} to ={`/work/${singleWork.frontmatter.slug}`}>
             <div className='work-title'>{singleWork.frontmatter.title}</div>
+            <div className="work-subtitle">
             {singleWork.frontmatter.subTitle}
+            </div>
             </Link>
           )
         })}

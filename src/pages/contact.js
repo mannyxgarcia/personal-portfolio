@@ -14,7 +14,7 @@ const Contact = () => {
           <SocialLinks />
         </div>
         <div className="contact-container">
-          <div className="contact-email">mannyalgarcia@gmail.com</div>
+          <a href="mailto:mannyalgarcia@gmail.com" className="contact-email">mannyalgarcia@gmail.com</a>
         </div>
       </div>
     </React.Fragment>
