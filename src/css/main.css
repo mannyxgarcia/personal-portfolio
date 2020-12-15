@@ -226,10 +226,10 @@ Nav
 About
 ===============
 */
-.main-container {
+/* .main-container {
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* .header {
   height: 40vh;

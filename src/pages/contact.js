@@ -24,6 +24,8 @@ const Contact = () => {
 
 const Wrapper = styled.section`
   .main-container {
+    display: flex;
+    flex-direction: column;
     margin: 1rem 4rem 1rem 10rem;
   }
   
