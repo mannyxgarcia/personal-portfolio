@@ -1,13 +1,9 @@
 import React from 'react'
-import Hero from '../components/Hero'
-import Layout from '../components/Layout'
-import { graphql } from 'gatsby'
-// ...GatsbyImageSharpFluid
+import Home from '../components/Home'
+
 const IndexPage = () => {
   return (
-  <Layout>
-    <Hero />
-  </Layout>
+    <Home />
   )
 }
 

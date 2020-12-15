@@ -1,12 +1,9 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Image from 'gatsby-image'
-// ...GatsbyImageSharpFluid
 import {
   MdTouchApp,
 } from "react-icons/md"
 
-const Hero = () => {
+const Home = () => {
   const background = document.querySelector('body')
   return (
     <React.Fragment>
@@ -37,4 +34,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default Home
