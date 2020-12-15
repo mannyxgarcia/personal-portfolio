@@ -1,29 +1,31 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
-// ...GatsbyImageSharpFluid
+
 const Work = ({data}) => {
   const {allMdx:{nodes:work}} = data
-  console.log(work)
   const background = document.querySelector('body')
   return (
-    <React.Fragment>
-      {background.setAttribute('style', 'background: #01cab9')}
-      <Navbar></Navbar>
-      <div className="main-container">
-        {work.map(singleWork => {
-          return (
-            <Link key={singleWork.id} to ={`/work/${singleWork.frontmatter.slug}`}>
-            <div className='work-title'>{singleWork.frontmatter.title}</div>
-            <div className="work-subtitle">
-            {singleWork.frontmatter.subTitle}
-            </div>
-            </Link>
-          )
-        })}
+    <>
+      <Wrapper>
+        {background.setAttribute('style', 'background: #01cab9')}
+        <Navbar/>
+        <div className="main-container">
+          {work.map(singleWork => {
+            return (
+              <Link key={singleWork.id} to ={`/work/${singleWork.frontmatter.slug}`}>
+              <div className='work-title'>{singleWork.frontmatter.title}</div>
+              <div>
+              {singleWork.frontmatter.subTitle}
+              </div>
+              </Link>
+            )
+          })}
         </div>
-    </React.Fragment>
+      </Wrapper>
+    </>
     
     )
 }
@@ -40,6 +42,31 @@ export const query = graphql`
         }
         id
       }
+    }
+  }
+`
+const Wrapper = styled.section`
+  .main-container {
+    margin: 1rem 4rem 1rem 10rem;
+  }
+  
+  .work-title {
+    font-size: 3rem;
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .main-container {
+      margin: 3rem 1rem 1.5rem 1.5rem
+    }
+    
+    .work-title {
+    font-size: 2.5rem;
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
     }
   }
 `
