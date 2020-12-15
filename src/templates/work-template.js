@@ -58,11 +58,8 @@ const Wrapper = styled.section`
     flex-direction: column;
     align-items: center;
     color: #000;
+    padding-bottom: 5rem
   }
-  /* .img {
-    width: 100vw;
-    align-self: flex-start;
-  } */
   .title {
     align-self: flex-start;
   }
@@ -102,7 +99,7 @@ const Wrapper = styled.section`
     }
   }
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 825px) {
     .container {
       margin: 1.5rem;
     }

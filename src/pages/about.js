@@ -35,11 +35,11 @@ const About = () => {
 
 const Wrapper = styled.section`
   .main-container {
-    margin: 1rem 4rem 1rem 10rem;
+    margin: 1rem 4rem 2rem 10rem;
   }
   
   .header {
-  height: 40vh;
+  height: 36vh;
   }
   
   .secondary-container {
@@ -67,7 +67,7 @@ const Wrapper = styled.section`
   transform: translateY(-5px);
   }
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 810px) {
     .main-container {
       margin: 3rem 1rem 1.5rem 1.5rem
     }
