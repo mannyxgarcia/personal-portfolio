@@ -34,6 +34,12 @@ const Links = () => {
 
 const Wrapper = styled.section`
   .page-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100vh;
+    cursor: pointer;
     margin-right: 4rem;
   }
   
@@ -41,6 +47,26 @@ const Wrapper = styled.section`
   .link-work,
   .link-contact {
     font-size: 6rem;
+    font-weight: bold;
+  }
+  
+  .link-about:hover {
+  color: #e775fc;
+  }
+
+  .link-work:hover {
+    color: #01cab9;
+  }
+
+  .link-contact:hover {
+    color: #ffc77d;
+  }
+
+  .link-about,
+  .link-work,
+  .link-contact,
+  a {
+    color: inherit;
   }
   
   @media only screen and (max-width: 700px) {

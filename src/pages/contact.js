@@ -57,7 +57,6 @@ const Wrapper = styled.section`
     .contact-email {
       font-size: 1.3rem;
     }
-    
   }
 `
 

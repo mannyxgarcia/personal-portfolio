@@ -27,6 +27,7 @@ li {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 h1 {
@@ -38,27 +39,28 @@ h1 {
 h2 {
   font-size: 1.8rem;
 }
+
 /*
 ===============
 Links
 ===============
 */
-.page-links {
+/* .page-links {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
   height: 100vh;
   cursor: pointer;
-}
-
+} */
+/* 
 .link-about,
 .link-work,
 .link-contact {
   font-weight: bold;
-}
+} */
 
-.link-about:hover {
+/* .link-about:hover {
   color: #e775fc;
 }
 
@@ -75,7 +77,7 @@ Links
 .link-contact,
 a {
   color: inherit;
-}
+} */
 /*
 ===============
 Intro
