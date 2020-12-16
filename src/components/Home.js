@@ -4,11 +4,20 @@ import styled from 'styled-components'
 
 const Home = () => {
   const background = document.querySelector('body')
+  const [fadeOut, setFadeOut] = React.useState(false)
+  
+  function goToLinks() {
+    setTimeout(function(){
+      window.location.href='/links'
+    }, 100)
+  }
   return (
     <>
       <Wrapper>
         {background.setAttribute('style', 'background: #000')}
-        <div className="intro-container" onClick={event =>  window.location.href='/links'}>
+        <div className={`intro-container ${fadeOut ? "fade-out" : ''}`} onClick={() => {
+          setFadeOut(true) 
+          goToLinks()}}>
           <div className="intro-greeting-lg">
             Nice to Meet You.
           </div>
@@ -84,6 +93,19 @@ const Wrapper = styled.section`
         64%  { transform: translateY(0); }
         100% { transform: translateY(0); }
     }
+    
+  .fade-out {
+    animation: fadeOut ease .5s
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   
   @media only screen and (max-width: 700px) {
       .intro-container {

@@ -18,7 +18,7 @@ const Work = ({data}) => {
         {background.setAttribute('style', 'background: #01cab9')}
         <Navbar toggle={toggle}/>
         <Sidebar isOpen={isOpen} toggle={toggle} />
-        <div className="main-container">
+        <div className="main-container fade-in">
           {work.map(singleWork => {
             return (
               <Link key={singleWork.id} to ={`/work/${singleWork.frontmatter.slug}`} className='work-btn'>
@@ -71,6 +71,19 @@ const Wrapper = styled.section`
   
   .work-btn:hover {
     transform: translateX(8px)
+  }
+  
+  .fade-in {
+    animation: fadeIn ease 1s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   
   @media only screen and (max-width: 700px) {

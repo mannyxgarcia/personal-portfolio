@@ -4,15 +4,26 @@ import styled from 'styled-components'
 
 const Links = () => {
   const background = document.querySelector('body')
+  const [fadeOut, setFadeOut] = React.useState(false)
+  
+  function goToLink(link) {
+    setTimeout(function() {
+      window.location.href=`/${link}`
+    }, 500)
+  }
+  
   return (
     <>
       <Wrapper>
         {background.setAttribute('style', 'background: #000')}
-        <ul className="page-links">
+        <ul className={`page-links fade-in ${fadeOut ? 'fade-out' : ''}`}>
           <li className="link-about">
-            <Link to="/about" >
+            <el onClick={() => {
+              setFadeOut(true)
+              goToLink('about')
+            }} >
               About
-            </Link>
+            </el>
           </li>
           <li className="link-work">
             <Link to="/work" >
@@ -67,6 +78,32 @@ const Wrapper = styled.section`
   .link-contact,
   a {
     color: inherit;
+  }
+  
+  .fade-in {
+    animation: fadeIn ease 2s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fade-out {
+    animation: fadeOut ease .5s
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
   
   @media only screen and (max-width: 700px) {

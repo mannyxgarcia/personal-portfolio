@@ -18,7 +18,7 @@ const About = () => {
         {background.setAttribute('style', 'background: #ea88fc')}
         <Navbar toggle={toggle}/>
         <Sidebar isOpen={isOpen} toggle={toggle} />
-        <div className="main-container">
+        <div className="main-container fade-in">
           <div className="header">
             <h1>I am a full stack developer.</h1>
           </div>
@@ -71,6 +71,19 @@ const Wrapper = styled.section`
   
   .download-icon:hover {
   transform: translateY(-5px);
+  }
+  
+  .fade-in {
+    animation: fadeIn ease 1s
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   
   @media only screen and (max-width: 810px) {

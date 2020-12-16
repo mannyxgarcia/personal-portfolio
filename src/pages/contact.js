@@ -16,7 +16,7 @@ const Contact = () => {
         {background.setAttribute('style', 'background: #ffc77d')}
         <Navbar toggle={toggle} />
         <Sidebar isOpen={isOpen} toggle={toggle} />
-        <div className="main-container">
+        <div className="main-container fade-in">
           <h1>I'd love to get in touch.</h1>
           <SocialLinks />
           <div className="contact-container">
@@ -57,6 +57,19 @@ const Wrapper = styled.section`
     background: #fff;
     color: #ffc77d;
     transform: translateY(-8px);
+  }
+  
+  .fade-in {
+    animation: fadeIn ease 1s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   
   @media only screen and (max-width: 700px) {
