@@ -13,22 +13,22 @@ const Sidebar = ({ isOpen, toggle }) => {
           </button>
           <div className="sidebar-container">
             <ul className="sidebar-links">
-                <li className="link" onClick={toggle}>
+                <li className="link-about" onClick={toggle}>
                   <Link to="/" >
                   Home
                   </Link>
                 </li>
-                <li className="link" onClick={toggle}>
+                <li className="link-about" onClick={toggle}>
                   <Link to="/about" >
                     About
                   </Link>
                 </li>
-                <li className="link" onClick={toggle}>
+                <li className="link-work" onClick={toggle}>
                   <Link to="/work" >
                     Work
                   </Link>
                 </li>
-                <li className="link" onClick={toggle}>
+                <li className="link-contact" onClick={toggle}>
                   <Link to="/contact" >
                     Contact
                   </Link>
@@ -50,19 +50,18 @@ const Wrapper = styled.section`
     height: 100%;
     background: #000;
     transition: all 0.3s linear;
-    display: grid;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-left: 2rem;
     z-index: 999;
     transform: translateX(-100%);
     visibility: hidden;
-    flex-direction: column;
     margin: 0;
     color: #d8d8d8;
     font-size: 1.5rem;
     font-weight: 700;
-    padding: 5rem 0 0 3rem;
-    display: block;
+    padding: 5rem 0 15% 3rem;
     cursor: pointer;
   }
   .showSidebar {
@@ -72,11 +71,23 @@ const Wrapper = styled.section`
   .sidebar-links li {
     margin-bottom: 1.5rem;
   }
-  .sidebar-links .link {
+  .sidebar-links .link-about, .link-work, .link-contact {
     font-size: 4rem;
     display: block;
     color: #d8d8d8;
     font-weight: 700;
+  }
+  
+  .link-about:hover {
+  color: #e775fc;
+  }
+
+  .link-work:hover {
+    color: #01cab9;
+  }
+
+  .link-contact:hover {
+    color: #ffc77d;
   }
   
   .close-btn {

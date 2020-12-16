@@ -15,7 +15,7 @@ const Home = () => {
     <>
       <Wrapper>
         {background.setAttribute('style', 'background: #000')}
-        <div className={`intro-container ${fadeOut ? "fade-out" : ''}`} onClick={() => {
+        <div className={`intro-container fade-in ${fadeOut ? "fade-out" : ''}`} onClick={() => {
           setFadeOut(true) 
           goToLinks()}}>
           <div className="intro-greeting-lg">
@@ -104,6 +104,19 @@ const Wrapper = styled.section`
     }
     100% {
       opacity: 0;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn ease 2s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
   

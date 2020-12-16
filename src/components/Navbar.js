@@ -74,7 +74,7 @@ const Wrapper = styled.section`
     .toggle-btn {
       display: inline;
       color: #d8d8d8;
-      font-size: 1rem;
+      font-size: 2rem;
       background: transparent;
       border-color: transparent;
       cursor: pointer;
