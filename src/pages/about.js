@@ -4,14 +4,20 @@ import SocialLinks from '../constants/socialLinks'
 import {BsDownload} from 'react-icons/bs'
 import resume from '../constants/mgarcia-resume-12-20.pdf'
 import styled from 'styled-components'
+import Sidebar from '../components/Sidebar'
 
 const About = () => {
+  const [isOpen, setIsOpen] = React.useState(false)
   const background = document.querySelector('body')
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <>
       <Wrapper>
         {background.setAttribute('style', 'background: #ea88fc')}
-        <Navbar/>
+        <Navbar toggle={toggle}/>
+        <Sidebar isOpen={isOpen} toggle={toggle} />
         <div className="main-container">
           <div className="header">
             <h1>I am a full stack developer.</h1>

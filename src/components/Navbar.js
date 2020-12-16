@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { FaBars } from 'react-icons/fa'
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   return (
     <>
       <Wrapper>
@@ -28,6 +29,9 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+            <button className="toggle-btn" onClick={toggle}>
+              <FaBars/>
+            </button>
           </ul>
         </nav>
       </Wrapper>
@@ -53,6 +57,30 @@ const Wrapper = styled.section`
   .link:hover {
     color: #fff;
   }
+  
+  .toggle-btn {
+    display: none;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .link {
+      display: none;
+    }
+    
+    .nav-links {
+      justify-content: flex-end
+    }
+    
+    .toggle-btn {
+      display: inline;
+      color: #d8d8d8;
+      font-size: 1rem;
+      background: transparent;
+      border-color: transparent;
+      cursor: pointer;
+    }
+  }
+  
 `
 
 export default Navbar

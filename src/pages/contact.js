@@ -2,14 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import Navbar from '../components/Navbar'
 import SocialLinks from '../constants/socialLinks'
+import Sidebar from '../components/Sidebar'
 
 const Contact = () => {
+  const [isOpen, setIsOpen] = React.useState(false)
   const background = document.querySelector('body')
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <>
       <Wrapper>
         {background.setAttribute('style', 'background: #ffc77d')}
-        <Navbar />
+        <Navbar toggle={toggle} />
+        <Sidebar isOpen={isOpen} toggle={toggle} />
         <div className="main-container">
           <h1>I'd love to get in touch.</h1>
           <SocialLinks />

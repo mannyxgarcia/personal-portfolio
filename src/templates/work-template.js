@@ -4,14 +4,20 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Image from 'gatsby-image'
+import Sidebar from '../components/Sidebar'
 
 const WorkTemplate = ({data}) => {
   const {mdx:{frontmatter:{title, subTitle, date, image},body,}} = data
+  const [isOpen, setIsOpen] = React.useState(false)
   const background = document.querySelector('body')
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <React.Fragment>
       {background.setAttribute('style', 'background: #f5f5f5')}
-      <Navbar></Navbar>
+      <Navbar toggle={toggle}/>
+        <Sidebar isOpen={isOpen} toggle={toggle} />
       <Wrapper>
         <div className='container'>
           <div className="title">

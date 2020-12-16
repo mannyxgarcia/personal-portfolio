@@ -3,15 +3,21 @@ import Navbar from '../components/Navbar'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
+import Sidebar from '../components/Sidebar'
 
 const Work = ({data}) => {
   const {allMdx:{nodes:work}} = data
+  const [isOpen, setIsOpen] = React.useState(false)
   const background = document.querySelector('body')
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <>
       <Wrapper>
         {background.setAttribute('style', 'background: #01cab9')}
-        <Navbar/>
+        <Navbar toggle={toggle}/>
+        <Sidebar isOpen={isOpen} toggle={toggle} />
         <div className="main-container">
           {work.map(singleWork => {
             return (
