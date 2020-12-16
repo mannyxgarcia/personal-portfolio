@@ -20,7 +20,9 @@ const Contact = () => {
           <h1>I'd love to get in touch.</h1>
           <SocialLinks />
           <div className="contact-container">
-            <a href="mailto:mannyalgarcia@gmail.com" className="contact-email">mannyalgarcia@gmail.com</a>
+            <button className="contact-email">
+              <a href="mailto:mannyalgarcia@gmail.com">mannyalgarcia@gmail.com</a>
+            </button>
           </div>
         </div>
       </Wrapper>
@@ -41,7 +43,7 @@ const Wrapper = styled.section`
   }
   
   .contact-email {
-    border-style: solid;
+    border-style: none;
     border-radius: .5rem;
     padding: 1rem;
     margin-top: 2rem;
@@ -54,7 +56,7 @@ const Wrapper = styled.section`
   .contact-email:hover {
     background: #fff;
     color: #ffc77d;
-    transform: translateY(-5px);
+    transform: translateY(-8px);
   }
   
   @media only screen and (max-width: 700px) {

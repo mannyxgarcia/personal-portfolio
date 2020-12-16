@@ -21,7 +21,7 @@ const Work = ({data}) => {
         <div className="main-container">
           {work.map(singleWork => {
             return (
-              <Link key={singleWork.id} to ={`/work/${singleWork.frontmatter.slug}`}>
+              <Link key={singleWork.id} to ={`/work/${singleWork.frontmatter.slug}`} className='work-btn'>
               <div className='work-title'>{singleWork.frontmatter.title}</div>
               <div>
               {singleWork.frontmatter.subTitle}
@@ -63,6 +63,14 @@ const Wrapper = styled.section`
     padding-top: 4rem;
     margin-bottom: 1rem;
     font-weight: bold;
+  }
+  
+  .work-btn {
+    transition: all 0.3s linear;
+  }
+  
+  .work-btn:hover {
+    transform: translateX(8px)
   }
   
   @media only screen and (max-width: 700px) {

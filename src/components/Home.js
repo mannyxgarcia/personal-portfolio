@@ -21,10 +21,12 @@ const Home = () => {
             I'm Manny
           </div>
     
-          <div className="intro-tap">
-            <MdTouchApp className="pointer-icon"></MdTouchApp>
-            {' '}
-            tap to begin
+          <div className="tap-container">
+            <div className="tap-content bounce">
+                <MdTouchApp />
+                {' '}
+                tap to begin
+            </div>
           </div>
         </div>
       </Wrapper>
@@ -57,10 +59,31 @@ const Wrapper = styled.section`
     font-weight: bold
   }
   
-  .intro-tap {
+  .tap-container {
     margin-top: 2rem;
     text-align: center;
   }
+  
+  .tap-content {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    color: #f5f5f5;
+  }
+  
+  .bounce {
+    animation-name: bounce;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes bounce {
+        0%   { transform: translateY(0); }
+        10%  { transform: translateY(0); }
+        30%  { transform: translateY(-20px); }
+        50%  { transform: translateY(0); }
+        57%  { transform: translateY(-7px); }
+        64%  { transform: translateY(0); }
+        100% { transform: translateY(0); }
+    }
   
   @media only screen and (max-width: 700px) {
       .intro-container {
