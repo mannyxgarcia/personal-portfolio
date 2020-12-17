@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Navbar from '../components/Navbar'
 import SocialLinks from '../constants/socialLinks'
 import Sidebar from '../components/Sidebar'
+import { document } from 'browser-monads'
 
 const Contact = () => {
   const [isOpen, setIsOpen] = React.useState(false)

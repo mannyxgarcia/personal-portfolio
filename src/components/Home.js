@@ -1,6 +1,8 @@
 import React from 'react'
 import { MdTouchApp } from "react-icons/md"
 import styled from 'styled-components'
+import { window, document } from 'browser-monads'
+
 
 const Home = () => {
   const background = document.querySelector('body')

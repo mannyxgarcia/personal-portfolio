@@ -25,5 +25,12 @@ module.exports = {
         username: `gatsbyjs`,
       },
     },
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'portal',
+        id: 'portal',
+      },
+    },
   ],
 }

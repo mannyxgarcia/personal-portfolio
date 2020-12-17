@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
+import { document } from 'browser-monads'
 
 const Links = () => {
   const background = document.querySelector('body')

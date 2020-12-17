@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Image from 'gatsby-image'
 import Sidebar from '../components/Sidebar'
+import { document } from 'browser-monads'
 
 const WorkTemplate = ({data}) => {
   const {mdx:{frontmatter:{title, subTitle, date, image},body,}} = data
@@ -13,6 +14,7 @@ const WorkTemplate = ({data}) => {
   const toggle = () => {
     setIsOpen(!isOpen)
   }
+  
   return (
     <React.Fragment>
       {background.setAttribute('style', 'background: #f5f5f5')}

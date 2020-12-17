@@ -5,6 +5,7 @@ import {BsDownload} from 'react-icons/bs'
 import resume from '../constants/mgarcia-resume-12-20.pdf'
 import styled from 'styled-components'
 import Sidebar from '../components/Sidebar'
+import { document } from 'browser-monads'
 
 const About = () => {
   const [isOpen, setIsOpen] = React.useState(false)

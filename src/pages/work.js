@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 import Sidebar from '../components/Sidebar'
+import { document } from 'browser-monads'
 
 const Work = ({data}) => {
   const {allMdx:{nodes:work}} = data
