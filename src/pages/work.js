@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 import Sidebar from '../components/Sidebar'
 import { document } from 'browser-monads'
+import { Helmet } from 'react-helmet'
 
 const Work = ({data}) => {
   const {allMdx:{nodes:work}} = data
@@ -16,7 +17,9 @@ const Work = ({data}) => {
   return (
     <>
       <Wrapper>
-        {background.setAttribute('style', 'background: #01cab9')}
+        <Helmet>
+          <style>{'body { background-color: #01cab9 }'}</style>
+        </Helmet>
         <Navbar toggle={toggle}/>
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <div className="main-container fade-in">

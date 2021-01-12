@@ -2,7 +2,7 @@ import React from 'react'
 import { MdTouchApp } from "react-icons/md"
 import styled from 'styled-components'
 import { window, document } from 'browser-monads'
-
+import Helmet from 'react-helmet';
 
 const Home = () => {
   const background = document.querySelector('body')
@@ -16,7 +16,9 @@ const Home = () => {
   return (
     <>
       <Wrapper>
-        {background.setAttribute('style', 'background: #000')}
+        <Helmet>
+          <style>{'body { background-color: #000 }'}</style>
+        </Helmet>
         <div className={`intro-container fade-in ${fadeOut ? "fade-out" : ''}`} onClick={() => {
           setFadeOut(true) 
           goToLinks()}}>

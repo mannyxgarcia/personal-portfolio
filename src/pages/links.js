@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 import { document } from 'browser-monads'
+import { Helmet } from 'react-helmet'
 
 const Links = () => {
   const background = document.querySelector('body')
@@ -9,7 +10,9 @@ const Links = () => {
   return (
     <>
       <Wrapper>
-        {background.setAttribute('style', 'background: #000')}
+        <Helmet>
+          <style>{'body { background-color: #000 }'}</style>
+        </Helmet>
         <div className="">
           <ul className="page-links fade-in">
             <li className="link-about">

@@ -6,6 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Image from 'gatsby-image'
 import Sidebar from '../components/Sidebar'
 import { document } from 'browser-monads'
+import { Helmet } from 'react-helmet'
 
 const WorkTemplate = ({data}) => {
   const {mdx:{frontmatter:{title, subTitle, date, image},body,}} = data
@@ -17,7 +18,9 @@ const WorkTemplate = ({data}) => {
   
   return (
     <React.Fragment>
-      {background.setAttribute('style', 'background: #f5f5f5')}
+      <Helmet>
+        <style>{'body { background-color: #f5f5f5 }'}</style>
+      </Helmet>
       <Navbar toggle={toggle}/>
         <Sidebar isOpen={isOpen} toggle={toggle} />
       <Wrapper>

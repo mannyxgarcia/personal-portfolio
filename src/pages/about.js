@@ -6,6 +6,7 @@ import resume from '../constants/mgarcia-resume-12-20.pdf'
 import styled from 'styled-components'
 import Sidebar from '../components/Sidebar'
 import { document } from 'browser-monads'
+import { Helmet } from 'react-helmet'
 
 const About = () => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -16,7 +17,9 @@ const About = () => {
   return (
     <>
       <Wrapper>
-        {background.setAttribute('style', 'background: #ea88fc')}
+        <Helmet>
+          <style>{'body { background-color: #ea88fc }'}</style>
+        </Helmet>
         <Navbar toggle={toggle}/>
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <div className="main-container fade-in">

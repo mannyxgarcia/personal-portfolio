@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import SocialLinks from '../constants/socialLinks'
 import Sidebar from '../components/Sidebar'
 import { document } from 'browser-monads'
+import { Helmet } from 'react-helmet'
 
 const Contact = () => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -14,7 +15,9 @@ const Contact = () => {
   return (
     <>
       <Wrapper>
-        {background.setAttribute('style', 'background: #ffc77d')}
+        <Helmet>
+          <style>{'body { background-color: #ffc77d }'}</style>
+        </Helmet>
         <Navbar toggle={toggle} />
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <div className="main-container fade-in">
