@@ -14,17 +14,17 @@ const Links = () => {
           <ul className="page-links fade-in">
             <li className="link-about">
               <Link to="/about">
-                About.
+                About
               </Link>
             </li>
             <li className="link-work">
               <Link to="/work" >
-                Work.
+                Work
               </Link>
             </li>
             <li className="link-contact">
               <Link to="/contact" >
-                Contact.
+                Contact
               </Link>
             </li>
             <li className="intro-tap">
