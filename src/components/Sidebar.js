@@ -15,22 +15,22 @@ const Sidebar = ({ isOpen, toggle }) => {
             <ul className="sidebar-links">
                 <li className="link-about" onClick={toggle}>
                   <Link to="/" >
-                  Home
+                  Home.
                   </Link>
                 </li>
                 <li className="link-about" onClick={toggle}>
                   <Link to="/about" >
-                    About
+                    About.
                   </Link>
                 </li>
                 <li className="link-work" onClick={toggle}>
                   <Link to="/work" >
-                    Work
+                    Work.
                   </Link>
                 </li>
                 <li className="link-contact" onClick={toggle}>
                   <Link to="/contact" >
-                    Contact
+                    Contact.
                   </Link>
                 </li>
               </ul>
