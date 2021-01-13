@@ -11,22 +11,22 @@ const Navbar = ({toggle}) => {
           <ul className="nav-links">
             <li className="link">
               <Link to="/" >
-              Home
+              Home.
               </Link>
             </li>
             <li className="link">
               <Link to="/about" >
-                About
+                About.
               </Link>
             </li>
             <li className="link">
               <Link to="/work" >
-                Work
+                Work.
               </Link>
             </li>
             <li className="link">
               <Link to="/contact" >
-                Contact
+                Contact.
               </Link>
             </li>
             <button className="toggle-btn" onClick={toggle}>

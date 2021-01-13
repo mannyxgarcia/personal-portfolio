@@ -1,11 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from 'styled-components'
-import { document } from 'browser-monads'
 import { Helmet } from 'react-helmet'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Links = () => {
-  const background = document.querySelector('body')
   
   return (
     <>
@@ -16,19 +14,19 @@ const Links = () => {
         <div className="">
           <ul className="page-links fade-in">
             <li className="link-about">
-              <Link to="/about">
-                About
-              </Link>
+              <AniLink paintDrip to="/about" hex="#ea88fc">
+                About.
+              </AniLink>
             </li>
             <li className="link-work">
-              <Link to="/work" >
-                Work
-              </Link>
+              <AniLink paintDrip to="/work" hex="#01cab9" >
+                Work.
+              </AniLink>
             </li>
             <li className="link-contact">
-              <Link to="/contact" >
-                Contact
-              </Link>
+              <AniLink paintDrip to="/contact" hex="#ffc77d" >
+                Contact.
+              </AniLink>
             </li>
             <li className="intro-tap">
             </li>

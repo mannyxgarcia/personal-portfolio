@@ -5,13 +5,11 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Image from 'gatsby-image'
 import Sidebar from '../components/Sidebar'
-import { document } from 'browser-monads'
 import { Helmet } from 'react-helmet'
 
 const WorkTemplate = ({data}) => {
   const {mdx:{frontmatter:{title, subTitle, date, image},body,}} = data
   const [isOpen, setIsOpen] = React.useState(false)
-  const background = document.querySelector('body')
   const toggle = () => {
     setIsOpen(!isOpen)
   }

@@ -1,27 +1,18 @@
 import React from 'react'
 import { MdTouchApp } from "react-icons/md"
 import styled from 'styled-components'
-import { window, document } from 'browser-monads'
 import Helmet from 'react-helmet';
+import { Link } from 'gatsby'
 
 const Home = () => {
-  const background = document.querySelector('body')
-  const [fadeOut, setFadeOut] = React.useState(false)
-  
-  function goToLinks() {
-    setTimeout(function(){
-      window.location.href='/links'
-    }, 100)
-  }
   return (
     <>
       <Wrapper>
         <Helmet>
           <style>{'body { background-color: #000 }'}</style>
         </Helmet>
-        <div className={`intro-container fade-in ${fadeOut ? "fade-out" : ''}`} onClick={() => {
-          setFadeOut(true) 
-          goToLinks()}}>
+        <Link to="/links">
+        <div className="intro-container">
           <div className="intro-greeting-lg">
             Nice to Meet You.
           </div>
@@ -42,6 +33,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        </Link>
       </Wrapper>
     </>
     )

@@ -4,13 +4,11 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 import Sidebar from '../components/Sidebar'
-import { document } from 'browser-monads'
 import { Helmet } from 'react-helmet'
 
 const Work = ({data}) => {
   const {allMdx:{nodes:work}} = data
   const [isOpen, setIsOpen] = React.useState(false)
-  const background = document.querySelector('body')
   const toggle = () => {
     setIsOpen(!isOpen)
   }
