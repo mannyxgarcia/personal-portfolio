@@ -94,7 +94,7 @@ const Wrapper = styled.section`
     }
     
     .work-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     padding-top: 4rem;
     margin-bottom: 1rem;
     font-weight: bold;
