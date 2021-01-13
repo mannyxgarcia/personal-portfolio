@@ -30,7 +30,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                 </li>
                 <li className="link-contact" onClick={toggle}>
                   <Link to="/contact" >
-                    Contact
+                    Contact.
                   </Link>
                 </li>
               </ul>
