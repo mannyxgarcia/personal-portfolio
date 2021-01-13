@@ -61,7 +61,7 @@ const Wrapper = styled.section`
     color: #d8d8d8;
     font-size: 1.5rem;
     font-weight: 700;
-    padding: 5rem 0 15% 3rem;
+    padding: 0 0 0 3rem;
     cursor: pointer;
   }
   .showSidebar {
