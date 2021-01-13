@@ -29,7 +29,7 @@ const About = () => {
               <SocialLinks />
             </div>
             <div className="content-container">
-              I am a full stack web developer with a passion for front-end web developement. I have 4 years of work experience in design for theatrical entertainment. I transitioned to software engineering to pursue a previous passion I had developed in my early high school years. I enjoy building out the visual components of a design and layout with careful consideration for the overall user experience. I blend my knowledge in design and technical skills to collaborate and create products with thoughtful and creative solutions. 
+              I am a full stack web developer with a passion for front-end web developement. I have 4 years of work experience in design for theatrical entertainment. I transitioned to software engineering to pursue previous passions I had developed before design. I enjoy building out the visual components of a design and layout with careful consideration for the overall user experience. I blend my knowledge in design and technical skills to collaborate and create products with thoughtful and creative solutions. 
             </div>
             <div className="resume-link download-icon">
             <a href={resume} download="mgarcia-resume.pdf"> <BsDownload/> download resume</a>
