@@ -90,7 +90,7 @@ const Wrapper = styled.section`
   
   @media only screen and (max-width: 700px) {
     .main-container {
-      margin: 3rem 1rem 1.5rem 1.5rem
+      margin: 0rem 1rem 1.5rem 1.5rem
     }
     
     .work-title {

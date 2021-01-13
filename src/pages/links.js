@@ -14,7 +14,7 @@ const Links = () => {
         <div className="">
           <ul className="page-links fade-in">
             <li className="link-about">
-              <AniLink paintDrip to="/about" hex="#ea88fc">
+              <AniLink paintDrip to="/about" hex="#e775fc">
                 About.
               </AniLink>
             </li>
@@ -90,6 +90,7 @@ const Wrapper = styled.section`
   @media only screen and (max-width: 700px) {
     .page-links {
       margin-right: 2rem;
+      height: 90vh;
     }
     
     .link-about,

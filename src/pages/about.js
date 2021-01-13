@@ -16,7 +16,7 @@ const About = () => {
     <>
       <Wrapper>
         <Helmet>
-          <style>{'body { background-color: #ea88fc }'}</style>
+          <style>{'body { background-color: #e775fc }'}</style>
         </Helmet>
         <Navbar toggle={toggle}/>
         <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -90,7 +90,7 @@ const Wrapper = styled.section`
   
   @media only screen and (max-width: 810px) {
     .main-container {
-      margin: 3rem 1rem 1.5rem 1.5rem
+      margin: 0rem 1rem 1.5rem 1.5rem
     }
     
     .secondary-container {

@@ -123,7 +123,7 @@ const Wrapper = styled.section`
   
   @media only screen and (max-width: 825px) {
     .container {
-      margin: 1.5rem;
+      margin: 0 1.5rem 1.5rem 1.5rem;
     }
     .title {
       padding-bottom: 1rem

@@ -119,6 +119,7 @@ const Wrapper = styled.section`
   @media only screen and (max-width: 700px) {
       .intro-container {
       margin-left: 3rem;
+      height: 90vh;
     }
     .intro-greeting-lg {
       display: none;
