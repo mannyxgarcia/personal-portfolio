@@ -90,7 +90,7 @@ const Wrapper = styled.section`
   
   @media only screen and (max-width: 810px) {
     .main-container {
-      margin: 0rem 1rem 1.5rem 1.5rem
+      margin: 0rem 1rem 3rem 1.5rem
     }
     
     .secondary-container {
