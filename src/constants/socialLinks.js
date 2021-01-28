@@ -21,7 +21,7 @@ const SocialLinks = () => {
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/manny_xcx">
+            <a href="https://twitter.com/mannyxgarcia">
               <FaTwitterSquare className="social-icon twitter-icon"></FaTwitterSquare>
             </a>
           </li>
