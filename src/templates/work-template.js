@@ -23,12 +23,12 @@ const WorkTemplate = ({data}) => {
         <Sidebar isOpen={isOpen} toggle={toggle} />
       <Wrapper>
         <div className='container fade-in'>
-          <div className="title">
-            <h1>{title}</h1>
-            <div className="subTitle">{subTitle}</div>
-          </div>
           <div className='img'>
-              <Image fluid={image.childImageSharp.fluid}/>
+            <div className="title">
+              <h1>{title}</h1>
+            </div>
+            <div className="subTitle">{subTitle}</div>
+            <Image fluid={image.childImageSharp.fluid}/>
           </div>
           <div className="content">
             <div className="body">
@@ -69,33 +69,32 @@ const Wrapper = styled.section`
     color: #000;
     padding-bottom: 5rem
   }
-  .title {
-    align-self: flex-start;
+  .title{
+    
   }
   .subTitle {
-    padding-bottom: 1rem
+    padding-bottom: 5rem
   }
-  .img {
-    align-self: flex-start;
-  }
+
   .content {
     font-size: 1.2rem;
     line-height: 2.1rem;
-    color: #494949
+    color: #494949;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   a{
     color: blue
   }
   @media only screen and (min-width: 700px) {
     .container {
-      margin: 5rem 4rem 1rem 10rem;
-      
+      margin-bottom: 1rem;
     }
     .title {
-      margin-bottom: 30vh;
+      /* margin-bottom: 10vh; */
     }
     .content {
-      padding: 4rem 8rem 0 4rem;
+      padding: 0rem 4rem 0 4rem;
       display: flex;
       flex-direction: column;
       align-items: center
@@ -121,16 +120,21 @@ const Wrapper = styled.section`
     }
   }
   
-  @media only screen and (max-width: 825px) {
-    .container {
+  @media only screen and (max-width: 810px) {
+    /* .container {
       margin: 0 1.5rem 1.5rem 1.5rem;
-    }
+    } */
     .title {
-      padding-bottom: 1rem
+      /* padding-bottom: 1rem */
     }
     .img {
       width: 90vw;
       margin-bottom: 3rem
+    }
+    
+    h1 {
+      margin-top: 1.5rem;
+      padding-top: 0;
     }
   }
   

@@ -74,7 +74,7 @@ const Wrapper = styled.section`
     }
   }
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 810px) {
     .main-container {
       margin: 0rem 1rem 1.5rem 1.5rem
     }
@@ -82,6 +82,12 @@ const Wrapper = styled.section`
     .contact-email {
       font-size: 1.3rem;
     }
+    
+    h1 {
+      margin-top: 3rem;
+      padding-top: 0;
+    }
+    
   }
 `
 

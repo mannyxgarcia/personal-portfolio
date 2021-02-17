@@ -88,16 +88,25 @@ const Wrapper = styled.section`
     }
   }
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 810px) {
     .main-container {
-      margin: 0rem 1rem 1.5rem 1.5rem
+      margin: 0rem 1rem 5rem 1.5rem
+    }
+    
+    .work-btn {
+      margin-bottom: 1rem
     }
     
     .work-title {
     font-size: 3rem;
-    padding-top: 4rem;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
     font-weight: bold;
+    padding: 0px;
+    }
+    
+    h1 {
+    margin-top: 1rem;
+    padding-top: 0px;
     }
   }
 `

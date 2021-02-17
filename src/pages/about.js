@@ -6,6 +6,7 @@ import resume from '../constants/mgarcia_resume_27-01-2021.pdf'
 import styled from 'styled-components'
 import Sidebar from '../components/Sidebar'
 import { Helmet } from 'react-helmet'
+import selfie from '../constants/portfolio-image.png'
 
 const About = () => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -25,6 +26,9 @@ const About = () => {
             <h1>I am a full stack developer.</h1>
           </div>
           <div className="secondary-container">
+            <div className="selfie-container">
+              <img className="selfie" src={selfie} />
+            </div>
             <div className="social-links">
               <SocialLinks />
             </div>
@@ -43,11 +47,16 @@ const About = () => {
 
 const Wrapper = styled.section`
   .main-container {
-    margin: 1rem 4rem 2rem 10rem;
+    margin: 0rem 4rem 2rem 10rem;
   }
   
   .header {
-  height: 36vh;
+  /* height: 20vh; */
+  }
+  
+  h1 {
+    margin-top: 0rem;
+    padding-top: 64px;
   }
   
   .secondary-container {
@@ -55,8 +64,8 @@ const Wrapper = styled.section`
   }
   
   .content-container {
-  padding: 1.5rem;
-  font-size: 1rem;
+  padding: 1.5rem 1rem 1rem 0;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   color: #fff;
   }
@@ -79,6 +88,15 @@ const Wrapper = styled.section`
     animation: fadeIn ease 1s
   }
   
+  .selfie-container {
+    padding-bottom: 1rem;  
+  }
+  
+  .selfie {
+    width: 30%;
+  }
+
+  
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -88,13 +106,34 @@ const Wrapper = styled.section`
     }
   }
   
+  @media only screen and (max-width: 1092px) {
+    .selfie {
+      width: 40%;
+    }
+  }
+  
   @media only screen and (max-width: 810px) {
     .main-container {
-      margin: 0rem 1rem 5rem 1.5rem
+      margin: 0rem 1rem 5rem 1.5rem;
+    }
+    
+    .content-container {
+      font-size: 1rem;
     }
     
     .secondary-container {
       padding: 0
+    }
+    
+    h1 {
+    margin-top: 1.5rem;
+    padding-top: 0px;
+    }
+  }
+  
+  @media only screen and (max-width: 809px){
+    .selfie {
+      width: 50%
     }
   }
 `
