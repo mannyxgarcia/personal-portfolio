@@ -94,7 +94,11 @@ const Wrapper = styled.section`
     }
     
     .work-btn {
-      margin-bottom: 1rem
+      margin-bottom: 1rem;
+    }
+    
+    .work-btn:hover {
+    transform: none;
     }
     
     .work-title {
