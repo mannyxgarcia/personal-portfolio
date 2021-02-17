@@ -6,13 +6,15 @@ import resume from '../constants/mgarcia_resume_27-01-2021.pdf'
 import styled from 'styled-components'
 import Sidebar from '../components/Sidebar'
 import { Helmet } from 'react-helmet'
-import selfie from '../constants/portfolio-image.png'
+import Image from 'gatsby-image'
+import { graphql } from 'gatsby'
 
-const About = () => {
+const About = ({data}) => {
   const [isOpen, setIsOpen] = React.useState(false)
   const toggle = () => {
     setIsOpen(!isOpen)
   }
+  console.log('ABOUT----', data)
   return (
     <>
       <Wrapper>
@@ -27,7 +29,7 @@ const About = () => {
           </div>
           <div className="secondary-container">
             <div className="selfie-container">
-              <img className="selfie" src={selfie} />
+              <Image fluid={data.file.childImageSharp.fluid}/>
             </div>
             <div className="social-links">
               <SocialLinks />
@@ -44,6 +46,18 @@ const About = () => {
     </>
   )
 }
+
+export const query = graphql`
+  query MyQuery {
+    file(relativePath: {eq: "portfolio-image.png"}){
+      childImageSharp{
+        fluid{
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 const Wrapper = styled.section`
   .main-container {
@@ -89,7 +103,8 @@ const Wrapper = styled.section`
   }
   
   .selfie-container {
-    padding-bottom: 1rem;  
+    padding-bottom: 1rem;
+    width: 50%;  
   }
   
   .selfie {
@@ -106,9 +121,9 @@ const Wrapper = styled.section`
     }
   }
   
-  @media only screen and (max-width: 1092px) {
-    .selfie {
-      width: 40%;
+  @media only screen and (min-width: 1092px) {
+    .selfie-container {
+      width: 25%;
     }
   }
   
@@ -131,11 +146,11 @@ const Wrapper = styled.section`
     }
   }
   
-  @media only screen and (max-width: 809px){
+  /* @media only screen and (max-width: 809px){
     .selfie {
       width: 50%
     }
-  }
+  } */
 `
 
 export default About
