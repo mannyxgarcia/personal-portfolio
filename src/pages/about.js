@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import SocialLinks from '../constants/socialLinks'
 import {BsDownload} from 'react-icons/bs'
-import resume from '../constants/mgarcia_resume_27-01-2021.pdf'
+import resume from '../constants/mgarcia_resume_16-06-2022-18-00-20.pdf'
 import styled from 'styled-components'
 import Sidebar from '../components/Sidebar'
 import { Helmet } from 'react-helmet'
@@ -35,7 +35,7 @@ const About = ({data}) => {
               <SocialLinks />
             </div>
             <div className="content-container">
-              I am a full stack web developer with a passion for front-end web developement. I have 4 years of work experience in design for theatrical entertainment. I transitioned to software engineering to pursue previous passions I had developed before designing for theater. I enjoy building out the visual components of a design and layout with careful consideration for the overall user experience. I blend my knowledge in design and technical skills to collaborate and create products with thoughtful and creative solutions. 
+              I am a full stack web developer with a passion for front-end web development. I have 4 years of work experience in design for theatrical entertainment. I transitioned to software engineering to pursue previous passions I had developed before designing for theater. I enjoy building out the visual components of a design and layout with careful consideration for the overall user experience. I blend my knowledge of design and my technical skills to collaborate and create products with thoughtful and creative solutions. 
             </div>
             <div className="resume-link download-icon">
             <a href={resume} download="mgarcia-resume.pdf"> <BsDownload/> download resume</a>
